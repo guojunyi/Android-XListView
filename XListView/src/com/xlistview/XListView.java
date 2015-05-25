@@ -413,7 +413,6 @@ public class XListView extends ViewGroup implements IXListView {
 				break;
 			}
 			boolean result = super.onInterceptTouchEvent(ev);
-			Log.e("my",""+result);
 			return result;
 		}
 
@@ -426,7 +425,6 @@ public class XListView extends ViewGroup implements IXListView {
 					return false;
 				}
 			}
-			Log.e("my","onTouchEvent");
 			boolean flag = false;
 
 			if ((null == fixBar || fixBar.getHeight() >= fixBar.getMeasuredHeight()||!isEnableFixBar)
@@ -698,11 +696,16 @@ public class XListView extends ViewGroup implements IXListView {
 
 		private void moveListView(int diff) {
 			if (pullHeaderMode == PULL_HEADER_MODE_FIX) {
-				if (null != pullHeaderView) {
+				if (null!=pullHeaderView) {
 					headerL = pullHeaderView.getLeft();
 					headerT = 0;
 					headerR = pullHeaderView.getRight();
-					headerB = diff;
+					if(diff>pullHeaderView.getMeasuredHeight()){
+						headerB = pullHeaderView.getMeasuredHeight();
+					}else{
+						headerB = diff;
+					}
+					
 					pullHeaderView.layout(headerL, headerT, headerR, headerB);
 				}
 			}
