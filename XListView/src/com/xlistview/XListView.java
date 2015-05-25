@@ -728,7 +728,7 @@ public class XListView extends ViewGroup implements IXListView {
 				}else{
 					
 					int height = this.getFirstVisiblePosition()==0?listHeaderView.getBottom():fixBarMinHeight;
-					if(diff>0){
+					if(diff>=0){
 						fixBarL = fixBar.getLeft();
 						fixBarT = diff+height-fixBar.getHeight();
 						fixBarR = fixBar.getMeasuredWidth();
@@ -1040,6 +1040,7 @@ public class XListView extends ViewGroup implements IXListView {
 						fixBar.layout(fixBarL, fixBarT, fixBarR, fixBarB);
 					}
 				}else{
+					Log.e("my",fixBar.getTop()+"");
 					if (firstVisibleItem == 0
 							&& listHeaderView.getBottom() >= fixBarMinHeight) {
 						if (mPullRefreshState == STATE_REFRESH) {
