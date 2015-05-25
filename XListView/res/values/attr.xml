@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="XListView">
+        <attr name="headerView" format="reference" />
+        <attr name="moreView" format="reference" />
+        <attr name="fixBar" format="reference" />
+        
+        <attr name="fixBarMinHeight" format="dimension" />
+    </declare-styleable>
+</resources>

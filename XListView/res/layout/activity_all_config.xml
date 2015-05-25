@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gjy="http://schemas.android.com/apk/res/com.xlistview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#689F38"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/app_name"
+        android:textColor="#fff" />
+
+    <com.xlistview.XListView
+   	    android:id="@+id/listView"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="match_parent"
+   	    gjy:headerView="@layout/layout_header_all_config"
+   	    gjy:moreView="@layout/layout_more_all_config"
+   	    gjy:fixBar="@layout/layout_fixbar_all_config"
+   	    gjy:fixBarMinHeight="0dp"
+   	    android:background="#fff" 
+   	    >
+   	    
+   	</com.xlistview.XListView>
+
+</LinearLayout>

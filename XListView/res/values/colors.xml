@@ -1,0 +1,4 @@
+<resources>
+<color name="item_selected">#4CAF50</color>
+<color name="item_unselect">#ffffff</color>
+</resources>

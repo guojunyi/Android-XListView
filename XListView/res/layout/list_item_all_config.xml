@@ -1,0 +1,105 @@
+<com.xlistview.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/backView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/menu1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#212121"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/menu2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#D32F2F"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#795548"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fontView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/selector_list_item" >
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:textColor="#388E3C" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+                <TextView 
+                    android:id="@+id/textLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                 	android:layout_weight="1"
+                 	android:gravity="center"
+                 	android:textColor="#4CAF50"
+                    />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" 
+                android:gravity="center_vertical"
+                >
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_weight="1"
+                    android:max="200"
+                    android:progress="0" />
+            </LinearLayout>
+
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.xlistview.SwipeLayout>

@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#4CAF50"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        >
+        <TextView
+            android:id="@+id/textTop"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="FixBar Top"
+            android:textColor="#fff" />
+        
+        
+        
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:scrollbars="none"
+            >
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <TextView 
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="TAB1"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    />
+                <TextView 
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="TAB2"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    />
+                <TextView 
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="TAB3"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    />
+                <TextView 
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="TAB4"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    />
+                <TextView 
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="TAB5"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    />
+                <TextView 
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="TAB6"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    />
+                <TextView 
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="TAB7"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+</LinearLayout>
