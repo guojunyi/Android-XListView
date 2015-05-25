@@ -1,95 +1,98 @@
-Android-ClipLayout
+Android-XListView
 ================
 ![](https://raw.githubusercontent.com/guojunyi/Android-XListView/master/screenshot/1.gif)
 ![](https://raw.githubusercontent.com/guojunyi/Android-XListView/master/screenshot/2.gif)
 ![](https://raw.githubusercontent.com/guojunyi/Android-XListView/master/screenshot/3.gif)
 ![](https://raw.githubusercontent.com/guojunyi/Android-XListView/master/screenshot/4.gif)
 ## Sample Application
-<a href="https://raw.githubusercontent.com/guojunyi/Android-ClipLayout/master/apk/ClipLayout.apk" target="_blank" title="Download From Google Play">Click to Download the simple apk</a>
+<a href="https://raw.githubusercontent.com/guojunyi/Android-XListView/master/apk/XListView.apk" target="_blank" title="Download From Google Play">Click to Download the simple apk</a>
 
 ## Usage
 ``` xml
-<com.cliplayout.widget.ClipLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/layout_clip"
-    android:background="#5c6bc0"
-    >
-
-</com.cliplayout.widget.ClipLayout>
+	<com.xlistview.XListView
+   	    android:id="@+id/listView"
+   	    android:layout_width="match_parent"
+   	    android:layout_height="match_parent"
+   	    gjy:headerView="@layout/layout_header_all_config"
+   	    gjy:moreView="@layout/layout_more_all_config"
+   	    gjy:fixBar="@layout/layout_fixbar_all_config"
+   	    gjy:fixBarMinHeight="0dp"
+   	    android:background="#fff" 
+   	    >
+   	    
+   	</com.xlistview.XListView>
 ```
 
 
 ``` java
-public class TestPage extends ClipPage{
+	public void pullUp();
 
-	@Override
-	public View onCreateView(Context context, LayoutInflater inflater,
-			ClipLayout container) {
-		// TODO Auto-generated method stub
-		View view = inflater.inflate(R.layout.xxxx, null);
-		return view;
-	}
+	public void autoRefresh();
 
-	@Override
-	public void onClipPagePushStart() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void enableSwipe(boolean enable);
 
-	@Override
-	public void onClipPagePushEnd() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void enableAutoCloseSwipe(boolean auto);
 
-	@Override
-	public void onClipPagePopStart() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void enablePullRefresh(boolean enable);
 
-	@Override
-	public void onClipPagePopEnd() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void enableLoadMore(boolean enable);
 
-	@Override
-	public void onClipPageOnStackTop() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void enableAutoLoadMore(boolean enable);
 
-	@Override
-	public void onClipPageLeaveStackTop() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void enableFixBar(boolean enable);
+	
+	public boolean isEnableSwipe();
 
-	@Override
-	public void onClipPageAttached() {
-		// TODO Auto-generated method stub
-		
-	}
+	public boolean isEnableAutoCloseSwipe();
 
-	@Override
-	public void onClipPageDetached() {
-		// TODO Auto-generated method stub
-		
-	}
+	public boolean isEnablePullRefresh();
 
-}
+	public boolean isEnableLoadMore();
+
+	public boolean isEnableAutoLoadMore();
+	
+	public boolean isEnableFixBar();
+
+	public int getPullRefreshState();
+
+	public void completeLoadMore();
+
+	public int getLoadMoreState();
+
+	public void setLoadMoreListener(LoadMoreListener loadMoreListener);
+
+	public void setPullRefreshListener(PullRefreshListener pullRefreshListener);
+	
+	public void setFixBarListener(FixBarListener fixBarListener);
+	
+	public ListAdapter getListAdapter();
+	
+	public int getPullHeaderMode();
+	
+	public void setPullHeaderMode(int pullHeaderMode);
+	
+	public InnerListView getListView();
+	
+	public int getFixBarMinHeight();
+	
+	public void setFixBarMinHeight(int fixBarMinHeight);
+	
+	public int getFixBarMode();
+	
+	public void setFixBarMode(int fixBarMode);
+	
+	public View getFixBar();
+	
+	public View getMoreView();
+	
+	public View getPullHeaderView();
+	
+	public EventTrigger getEventTrigger();
+	
+	public void setEventTrigger(EventTrigger eventTrigger);
 ```
 
-``` java
-TestPage page = new TestPage();
-page.setCx(Screen.center.x);
-page.setCy(Screen.center.y);
-page.setDuration(300);
-layout_clip.pushClipPage(clipPage);
-```
+
 
 ## License
 
