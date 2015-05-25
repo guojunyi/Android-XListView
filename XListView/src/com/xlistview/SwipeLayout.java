@@ -357,6 +357,9 @@ public class SwipeLayout extends ViewGroup {
 			ValueAnimator animator = ValueAnimator.ofInt(fontView.getLeft(),
 					-backView.getMeasuredWidth());
 			animator.setDuration(200);
+			if (!isOpen && null != mSwipeLayoutListener) {
+				mSwipeLayoutListener.onOpen();
+			}
 			animator.addUpdateListener(new AnimatorUpdateListener() {
 
 				@Override
@@ -365,9 +368,6 @@ public class SwipeLayout extends ViewGroup {
 					int frameValue = (Integer) animation.getAnimatedValue();
 					mHandler.sendEmptyMessage(frameValue);
 					if (frameValue == -backView.getMeasuredWidth()) {
-						if (!isOpen && null != mSwipeLayoutListener) {
-							mSwipeLayoutListener.onOpen();
-						}
 						isOpen = true;
 						isAnimating = false;
 					}
